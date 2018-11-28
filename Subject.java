@@ -11,8 +11,8 @@ public class Subject{
         }
 	 
 	// Changing object state of primary class
- 	public void setState(){
-		this.set = set;
+ 	public void setState(int state){
+		this.state = state;
 		notifyAllObservers();
 	}  
 
@@ -23,7 +23,7 @@ public class Subject{
 
 	// Deleting observer
 	public void deleteObserver(Observer observer){
-		observers.delete(observer);
+		observers.remove(observer);
 	}
 
 	// Notifying all dependent observers
